@@ -25,7 +25,7 @@ jobs:
       - name: Docker pull up the containers 
         run: |
           echo Building your docker images and spinning up containers 
-          docker-compose up
+          docker-compose up -d
       
       # Runs a single command using the runners shell
       - name: Enable TCP on port 8080
