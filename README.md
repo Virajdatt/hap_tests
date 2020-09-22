@@ -1,4 +1,4 @@
-## hap_tests
+## hap_tests with simple github actions
 
 This repo can be used to learn some basics and test some HAP configs in a dockerized environment.
 This esentially tries to elimnate one's need to setup a haproxy on  a vm and servers on multiple vm's to get started with haproxy and here one can learn and do some minimal testing on a local machine with docker and docker-compose installed.
@@ -49,3 +49,6 @@ Clear cookies and refresh to see roundrobin in action, the request will be redir
 In case changes are made to the hap/haproxy.cfg or any other file in general please use the --build argument to rebuild things
 
 <code>$docker-compose up --build</code>
+
+## The repo now has github actions setup
+![github actions](/images/github-actions.png)
