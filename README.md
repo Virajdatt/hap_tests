@@ -7,7 +7,7 @@ This esentially tries to elimnate one's need to setup a haproxy on  a vm and ser
 The repo comes with a simple 30 lines of a dockerized flask server, which servers a simple html.
 
 
-The folders flaskapp1 and flaskapp2 contain two slightly different versions of the same flaskapp.
+The folders *flaskapp1* and *flaskapp2* contain two slightly different versions of the same flaskapp.
 flaskapp2 has an extra line in its html saying :-
 I am from FAPP2   
 This is just to test that the requests are being routed to 2 different backends.
@@ -34,6 +34,9 @@ The below image shows haplog entry and the the container served from the image i
 The below image shows the response on explicity changing the serverid cookie to f1,
 it gets reflected in the image and 
 ![cookie change](/images/fapp_cookies.png)
+
+Clear cookies to see roundrobin in action, the request will be redirected to different backends,
+
 
 ## setup instructions
 

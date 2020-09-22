@@ -1,22 +1,25 @@
 version: '3.0'
 
-services: 
+services:
+  #Build a docker container with name fapp1 from the docker file under flaskapp1
+  #This app is not exposed to the host
   flask1:
     build: ./flaskapp1
-    #image: hap_docker_flask
-    #ports:
-    # - "404:5000"
     container_name: fapp1
+
+
   flask2:
+    #Build a docker container with name fapp2 from the docker file under flaskapp2
+    #This app is not exposed to the host
     build: ./flaskapp2
-    #image: hap_docker_flask
-    #ports:
-    # - "5000"
     container_name: fapp2
+
+
   hap:
+    #Build the HAP container and expose the port 8080 on the local machine
     build: ./hap
     ports: 
-      - "8080:80"
+      - "8080:80" #Refer the hap/haproxy.cfg line 10 where we bind the container to listen to port 80
     depends_on: 
       - flask1
       - flask2
