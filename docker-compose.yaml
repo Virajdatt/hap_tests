@@ -1,0 +1,22 @@
+version: '3.0'
+
+services: 
+  flask1:
+    build: ./flaskapp1
+    #image: hap_docker_flask
+    #ports:
+    # - "404:5000"
+    container_name: fapp1
+  flask2:
+    build: ./flaskapp2
+    #image: hap_docker_flask
+    #ports:
+    # - "5000"
+    container_name: fapp2
+  hap:
+    build: ./hap
+    ports: 
+      - "8080:80"
+    depends_on: 
+      - flask1
+      - flask2
