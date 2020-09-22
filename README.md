@@ -1,6 +1,6 @@
 ## hap_tests with simple github actions
 
-- [Heading](#Contents)
+- [Contents](#Contents)
 * [ScreenCaptures](#ScreenCaptures)
 * [setup-instructions](#setup-instructions)
 * [Github-Actions](#The-repo-now-has-github-actions-setup)
