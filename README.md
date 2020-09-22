@@ -36,7 +36,7 @@ it gets reflected in the image and
 ![cookie change](/images/fapp_cookies.png)
 
 Clear cookies to see roundrobin in action, the request will be redirected to different backends,
-
+![clear cookies](/images/clear-cookies.png)
 
 ## setup instructions
 
