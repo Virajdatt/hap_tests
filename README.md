@@ -52,3 +52,9 @@ In case changes are made to the hap/haproxy.cfg or any other file in general ple
 
 ## The repo now has github actions setup
 ![github actions](/images/github-actions.png)
+
+## TO-DO
+<ol>
+<li>Include write up for starting up the Haproxy</li>
+<li>Add comments in the haproxy.cfg file</li>
+</ol>
