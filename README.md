@@ -1,10 +1,10 @@
 ## hap_tests with simple github actions
 
 - [Contents](#Contents)
-* [ScreenCaptures](#ScreenCaptures)
-* [setup-instructions](#setup-instructions)
-* [Github-Actions](#The-repo-now-has-github-actions-setup)
-* [TO-DO](#TO-DO)
+	* [ScreenCaptures](#ScreenCaptures)
+	* [setup-instructions](#setup-instructions)
+	* [Github-Actions](#The-repo-now-has-github-actions-setup)
+	* [TO-DO](#TO-DO)
 
 This repo can be used to learn some basics and test some HAP configs in a dockerized environment.
 This esentially tries to elimnate one's need to setup a haproxy on  a vm and servers on multiple vm's to get started with haproxy and here one can learn and do some minimal testing on a local machine with docker and docker-compose installed.
