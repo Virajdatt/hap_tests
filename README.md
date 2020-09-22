@@ -37,10 +37,10 @@ it gets reflected in the image and
 
 ## setup instructions
 
-<code>$git clone https://github.com/Virajdatt/hap_tests.git
-	  $cd hap_tests
-	  $docker-compose up
-</code>
+```$git clone https://github.com/Virajdatt/hap_tests.git
+   $cd hap_tests
+   $docker-compose up
+```
 
 In case changes are made to the hap/haproxy.cfg or any other file in general please use the --build argument to rebuild things
 
