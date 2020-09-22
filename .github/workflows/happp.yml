@@ -1,0 +1,41 @@
+# This is a basic workflow to help you get started with Actions
+
+name: CI
+
+# Controls when the action will run. Triggers the workflow on push or pull request
+# events but only for the main branch
+on:
+  push:
+    branches: [ main ]
+jobs:
+
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+    
+    # step to check the commit message for string ci skip, to skip the github actions set on this job
+    if: "!contains(github.event.head_commit.message, 'ci skip')"
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
+
+      # Runs a multiple commands after the "|" in run section
+      - name: Docker pull up the containers 
+        run: |
+          echo Building your docker images and spinning up containers 
+          docker-compose up
+      
+      # Runs a single command using the runners shell
+      - name: Enable TCP on port 8080
+        run: sudo ufw allow 8080/tcp
+      
+      - name: Testing the hap
+        run: curl localhost:8080  
+      # This is run so the request routes to the other backend, should have or not have "I am FAPP 2"
+      - name: Testing the roundrobin
+        run: curl localhost:8080  
+        
+      - name: Explicitly test changing cookies using curl, should have I am FAPP 2
+        run: curl localhost:8080 -b serverid=f2
