@@ -37,7 +37,8 @@ it gets reflected in the image and
 
 ## setup instructions
 
-```$git clone https://github.com/Virajdatt/hap_tests.git
+```
+   $git clone https://github.com/Virajdatt/hap_tests.git
    $cd hap_tests
    $docker-compose up
 ```
